@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: DBT_test
+    tables:
+      - name: circle_stock
+      - name: circle_sales
+      
