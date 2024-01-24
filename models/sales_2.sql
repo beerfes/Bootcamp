@@ -11,7 +11,6 @@ SELECT
   ### Key ###
   ,s.orders_id
   ,s.pdt_id AS products_id
-  description : identifier of product
   ###########
 	-- qty --
 	,s.quantity AS qty
@@ -21,6 +20,10 @@ SELECT
   ,CAST(p.purchSE_PRICE AS FLOAT64) AS purchase_price
 	,ROUND(s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),2) AS purchase_cost
 	-- margin --
+<<<<<<< HEAD
 	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS product_margin2
+=======
+	,ROUND(s.revenue-s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),2) AS margin
+>>>>>>> e214d772c96586b1985173bf7182142c5abad9f2
 FROM sales s
 INNER JOIN product p ON s.pdt_id = p.products_id
