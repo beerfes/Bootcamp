@@ -11,6 +11,7 @@ SELECT
   ### Key ###
   ,s.orders_id
   ,s.pdt_id AS products_id
+  description : identifier of product
   ###########
 	-- qty --
 	,s.quantity AS qty
